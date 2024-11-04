@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    //
+    protected $guarded = ["id"];
+
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, "item_order");
+    }
 }

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('agencies', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("image");
+            $table->string("ktp_number");
+            $table->string("ktp_image");
+            $table->string("surat_kepemilikan_image");
             $table->timestamps();
         });
     }

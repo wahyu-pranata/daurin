@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->integer("base_price");
+            $table->integer("top_price");
+            $table->string("unit");
+            $table->foreignId("agency_id")->references("id")->on("agencies")->onDelete("cascade")->onUpdate("cascade");
             $table->timestamps();
         });
     }

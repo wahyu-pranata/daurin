@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Agency extends Model
 {
-    //
+    protected $guarded = ["id"];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
