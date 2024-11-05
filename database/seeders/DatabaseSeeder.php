@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,7 +14,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        DB::table("agencies")->insert([
+            "name" => "Agen 1",
+            "image" => "somewhere/something.jpg",
+            "ktp_number" => 1234567812345678,
+            "ktp_image" => "somwhere/something.jpg",
+            "surat_kepemilikan_image" => "somwhere/something.pdf",
+            "address" => "Jalan jalan, Gg. Guanjiwa",
+            "province" => "Bali",
+            "city" => "Denpasar",
+            "district" => "Denpasar Timur",
+            "village" => "Kesiman",
+            "postal_code" => "80237"
+        ]);
 
         User::factory()->create([
             'name' => 'Made Aditya',
