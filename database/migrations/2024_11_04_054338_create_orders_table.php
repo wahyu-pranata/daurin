@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->uuid();
+            $table->uuid("id")->primary();
             $table->string("delivery_option");
             $table->enum("status", ["pending", "progress", "success", "canceled"])->default("pending");
             $table->integer("shipping_cost");
             $table->string("transaction_proof");
-            $table->foreignId("user_id")->references("id")->on("users")->onDelete("cascade")->onDelete("cascade");
-            $table->foreignId("agency_id")->references("id")->on("agencies")->onDelete("cascade")->onDelete("cascade");
-            $table->foreignId("address_id")->references("id")->on("addresses")->onDelete("set null")->onUpdate("cascade");
+            $table->foreignId("user_id");
+            $table->foreignId("agency_id");
+            $table->foreignId("address_id");
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer("base_price");
             $table->integer("top_price");
             $table->string("unit");
-            $table->foreignId("agency_id")->references("id")->on("agencies")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreignId("agency_id");
             $table->timestamps();
         });
     }

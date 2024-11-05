@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum("role", ["agent", "customer"]);
-            $table->foreignId("agency_id")->nullable()->references("id")->on("agencies");
             $table->string("image");
+            $table->foreignId("agency_id");
             $table->rememberToken();
             $table->timestamps();
         });
