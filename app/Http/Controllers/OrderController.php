@@ -8,6 +8,11 @@ class OrderController extends Controller
 {
     public function detail(Request $request)
     {
-        return view('order.detail');
+        return view('user.order.detail');
+    }
+    
+    public function create(Request $request)
+    {
+        return view('user.order.new');
     }
 }
