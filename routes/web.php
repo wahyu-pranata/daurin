@@ -25,11 +25,13 @@ Route::middleware('auth')->group(function () {
 // User
 Route::middleware(['guest'])->group(function () {
     Route::get('/orders/new', [OrderController::class, 'create']);
-    Route::get('/orders', function () { return view("user.riwayat"); });
+    Route::get('/orders', function () {
+        return view("user.riwayat");
+    });
 });
 
 // Admin
-Route::middleware(['guest'])->prefix('admin')->group(function () {
+Route::middleware(['auth', 'can:is-agent'])->prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, 'dashboard']);
     Route::get('/pesanan', [AdminOrderController::class, 'index']);
     Route::get('/pesanan/detail', [AdminOrderController::class, 'detail']);
@@ -39,4 +41,4 @@ Route::middleware(['guest'])->prefix('admin')->group(function () {
     Route::get('/pengaturan', [AdminController::class, 'settings']);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
