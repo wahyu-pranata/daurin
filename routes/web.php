@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
+use App\Http\Controllers\LocationController;
 
 Route::get('/', function () {
     return view('user.landing-page');
@@ -39,6 +40,13 @@ Route::middleware(['auth', 'can:is-agent'])->prefix('/admin')->group(function ()
     Route::get('/notifikasi', [NotificationController::class, 'index']);
     Route::get('/profil', [AdminController::class, 'profil']);
     Route::get('/pengaturan', [AdminController::class, 'settings']);
+});
+
+Route::name('location.')->prefix('location')->controller(LocationController::class)->group(function () {
+    Route::get('/provinces', 'getProvinces');
+    Route::get('/cities/{provinceId}', 'getCities');
+    Route::get('/districts/{cityId}', 'getDistricts');
+    Route::get('/villages/{districtId}', 'getVillages');
 });
 
 require __DIR__ . '/auth.php';
