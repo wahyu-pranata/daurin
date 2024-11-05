@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.landing-page');
 });
 
 Route::get('/dashboard', function () {
@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
 // User
 Route::middleware(['guest'])->group(function () {
     Route::get('/orders/new', [OrderController::class, 'create']);
+    Route::get('/orders', function () { return view("user.riwayat"); });
 });
 
 // Admin
