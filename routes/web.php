@@ -1,28 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Admin\ItemController;
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\NotificationController;
-use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth
-Route::middleware(['guest'])->controller(AuthController::class)->group(function () {
-    Route::get('/login', 'index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Admin
-Route::middleware(['guest'])->prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'dashboard']);
-    Route::get('/pesanan', [AdminOrderController::class, 'index']);
-    Route::get('/pesanan/detail', [AdminOrderController::class, 'detail']);
-    Route::get('/barang', [ItemController::class, 'index']);
-    Route::get('/notifikasi', [NotificationController::class, 'index']);
-    Route::get('/profil', [AdminController::class, 'profil']);
-    Route::get('/pengaturan', [AdminController::class, 'settings']);
-});
+require __DIR__.'/auth.php';

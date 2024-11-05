@@ -51,7 +51,7 @@
         <div class="p-6 rounded-lg bg-white col-span-3">
             <h2 class="text-lg font-semibold mb-2">Laporan Usaha</h2>
             <div
-                class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 overflow-x-auto overflow-y-hidden">
+                class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 overflow-x-auto overflow-y-hidden">
                 <ul class="flex -mb-px">
                     <li class="me-2">
                         <a href="#"
@@ -59,7 +59,7 @@
                     </li>
                     <li class="me-2">
                         <a href="#"
-                            class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
+                            class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active"
                             aria-current="page">Dashboard</a>
                     </li>
                     <li class="me-2">
@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <a
-                            class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+                            class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed">Disabled</a>
                     </li>
                 </ul>
             </div>
@@ -81,8 +81,8 @@
         <div class="p-6 rounded-lg bg-white col-span-3">
             <h2 class="text-lg font-semibold mb-2">Konfirmasi Pesanan</h2>
             <div class="relative overflow-x-auto font-medium">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr>
                             <th class="px-6 py-3">
                                 ID
@@ -103,11 +103,11 @@
                     </thead>
                     <tbody>
                         @for ($i = 0; $i < 3; $i++)
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                            <tr class="bg-white border-b hover:bg-gray-50">
                                 <th class="px-6 py-4">
                                     #647
                                 </th>
-                                <td scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                <td scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap">
                                     Made Aditya
                                 </td>
                                 <td class="px-6 py-4">

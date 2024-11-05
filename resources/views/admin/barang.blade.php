@@ -19,7 +19,7 @@
                 class="block w-full px-4 py-2 pe-12 text-gray-900 border-none rounded-lg bg-white focus:ring-primary focus:border-primary"
                 placeholder="Search" required />
             <button class="absolute inset-y-0 right-0 flex items-center ps-3 px-5">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
@@ -89,14 +89,14 @@
         class="hidden modal overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full bg-[rgba(0,0,0,0.4)]">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="relative bg-white rounded-lg shadow">
                 <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <div class="flex items-center justify-between p-4 border-b rounded-t">
+                    <h3 class="text-lg font-semibold text-gray-900">
                         Tambah Jenis Barang
                     </h3>
                     <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
                         data-modal-toggle="crud-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 14 14">
