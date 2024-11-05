@@ -118,14 +118,14 @@
         class="hidden modal overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full bg-[rgba(0,0,0,0.4)]">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="relative bg-white rounded-lg shadow">
                 <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <div class="flex items-center justify-between p-4 border-b rounded-t">
+                    <h3 class="text-lg font-semibold text-gray-900">
                         Tentukan Harga
                     </h3>
                     <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
                         data-modal-toggle="crud-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 14 14">
@@ -139,7 +139,7 @@
                 <form class="p-4 md:p-5">
                     <img src="/img/cover.jpg" alt="" class="h-48 w-full object-cover rounded-lg border">
                     <div class="my-5">
-                        <label for="harga" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga
+                        <label for="harga" class="block mb-2 text-sm font-medium text-gray-900">Harga
                             Barang</label>
                         <input type="number" name="harga" id="harga"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
@@ -158,32 +158,32 @@
         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full bg-[rgba(0,0,0,0.4)]">
         <div class="relative w-full max-w-7xl max-h-full">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="relative bg-white rounded-lg shadow">
                 {{-- <!-- Modal body -->
                 <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500">
                         With less than a month to go before the European Union enacts new consumer privacy laws for its
                         citizens, companies around the world are updating their terms of service agreements to comply.
                     </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500">
                         The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
                         meant to ensure a common set of data rights in the European Union. It requires organizations to
                         notify users as soon as possible of high-risk data breaches that could personally affect them.
                     </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500">
                         With less than a month to go before the European Union enacts new consumer privacy laws for its
                         citizens, companies around the world are updating their terms of service agreements to comply.
                     </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500">
                         The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
                         meant to ensure a common set of data rights in the European Union. It requires organizations to
                         notify users as soon as possible of high-risk data breaches that could personally affect them.
                     </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500">
                         With less than a month to go before the European Union enacts new consumer privacy laws for its
                         citizens, companies around the world are updating their terms of service agreements to comply.
                     </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500">
                         The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
                         meant to ensure a common set of data rights in the European Union. It requires organizations to
                         notify users as soon as possible of high-risk data breaches that could personally affect them.

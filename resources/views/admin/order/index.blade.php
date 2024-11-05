@@ -9,7 +9,7 @@
         <div class="flex items-center gap-4 flex-wrap">
             <div class="relative w-72">
                 <button class="absolute inset-y-0 right-0 flex items-center ps-3 px-5">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
@@ -39,8 +39,8 @@
     <div class="p-6 rounded-lg bg-white col-span-3 mt-4">
         <h2 class="text-lg font-semibold mb-2">Riwayat Pesanan</h2>
         <div class="relative overflow-x-auto font-medium mt-6">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr>
                         <th class="px-6 py-3">
                             ID
@@ -64,11 +64,11 @@
                 </thead>
                 <tbody>
                     @for ($i = 0; $i < 3; $i++)
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                        <tr class="bg-white border-b hover:bg-gray-50">
                             <th class="px-6 py-4">
                                 <a href="/admin/pesanan/detail" class="hover:underline">#647</a>
                             </th>
-                            <td scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                            <td scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap">
                                 Made Aditya
                             </td>
                             <td class="px-6 py-4">
