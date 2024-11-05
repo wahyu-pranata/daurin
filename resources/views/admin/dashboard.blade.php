@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="grid grid-cols-3 gap-4">
-        <div class="p-6 rounded-lg bg-white">
+        <div class="p-6 rounded-lg bg-white col-span-3 md:col-span-1">
             <h5 class="text-lg font-semibold">Total Pesanan</h5>
             <h2 class="text-4xl font-bold mt-1.5">25.7K</h2>
             <div class="flex gap-1 items-center mt-1.5">
@@ -20,7 +20,7 @@
                 <span class="text-[#8B909A]">vs last month</span>
             </div>
         </div>
-        <div class="p-6 rounded-lg bg-white">
+        <div class="p-6 rounded-lg bg-white col-span-3 md:col-span-1">
             <h5 class="text-lg font-semibold">Total Pesanan</h5>
             <h2 class="text-4xl font-bold mt-1.5">25.7K</h2>
             <div class="flex gap-1 items-center mt-1.5">
@@ -34,7 +34,7 @@
                 <span class="text-[#8B909A]">vs last month</span>
             </div>
         </div>
-        <div class="p-6 rounded-lg bg-white">
+        <div class="p-6 rounded-lg bg-white col-span-3 md:col-span-1">
             <h5 class="text-lg font-semibold">Total Pesanan</h5>
             <h2 class="text-4xl font-bold mt-1.5">25.7K</h2>
             <div class="flex gap-1 items-center mt-1.5">
@@ -51,8 +51,8 @@
         <div class="p-6 rounded-lg bg-white col-span-3">
             <h2 class="text-lg font-semibold mb-2">Laporan Usaha</h2>
             <div
-                class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-                <ul class="flex flex-wrap -mb-px">
+                class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 overflow-x-auto overflow-y-hidden">
+                <ul class="flex -mb-px">
                     <li class="me-2">
                         <a href="#"
                             class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Profile</a>

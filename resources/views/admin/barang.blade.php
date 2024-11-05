@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 flex-wrap-reverse">
         <button type="button" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
             class="focus:outline-none text-white bg-primary hover:bg-teal-500 focus:ring-4 focus:ring-teal-100 font-medium rounded-lg text-sm px-4 py-2 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -14,7 +14,7 @@
             </svg>
             <span>Tambah Barang</span>
         </button>
-        <div class="relative w-72">
+        <div class="relative sm:w-72 w-full">
             <input type="text" id="search"
                 class="block w-full px-4 py-2 pe-12 text-gray-900 border-none rounded-lg bg-white focus:ring-primary focus:border-primary"
                 placeholder="Search" required />
@@ -28,10 +28,10 @@
         </div>
     </div>
     @for ($i = 0; $i < 3; $i++)
-        <div class="p-6 rounded-lg bg-white flex justify-between items-center mt-4">
+        <div class="p-6 rounded-lg bg-white flex justify-between items-center mt-4 flex-wrap gap-y-4">
             <div class="">
                 <h2 class="text-3xl font-semibold">Botol Plastik</h2>
-                <div class="flex items-center gap-4 mt-4 font-medium">
+                <div class="flex items-center gap-4 mt-2 sm:mt-4 font-medium">
                     <div class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -93,7 +93,7 @@
                 <!-- Modal header -->
                 <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Tentukan Harga
+                        Tambah Jenis Barang
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"

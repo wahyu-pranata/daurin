@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="flex items-center gap-4 justify-between font-medium">
-        <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 justify-between font-medium flex-wrap">
+        <div class="flex items-center gap-4 flex-wrap">
             <div class="relative w-72">
                 <button class="absolute inset-y-0 right-0 flex items-center ps-3 px-5">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"

@@ -6,8 +6,8 @@
 
 @section('content')
     @for ($i = 0; $i < 3; $i++)
-        <div class="p-6 rounded-lg bg-white flex justify-between items-center mt-4">
-            <div class="flex items-center gap-10">
+        <div class="p-6 rounded-lg bg-white flex justify-between items-center mt-4 flex-wrap gap-y-5">
+            <div class="flex items-center gap-x-10 gap-y-1 flex-wrap">
                 <h2 class="text-2xl font-bold">Pesanan #637</h2>
                 <div>
                     <p class="text-lg mb-2">Pesanan dari <strong>Wahyu Pranata</strong> dengan id <strong>#637</strong> belum
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <a href="" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+            <a href=""
                 class="focus:outline-none text-white bg-primary hover:bg-teal-500 focus:ring-4 focus:ring-teal-100 font-medium rounded-lg text-sm px-4 py-2 flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">

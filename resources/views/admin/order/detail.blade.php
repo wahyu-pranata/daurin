@@ -7,12 +7,12 @@
 @section('content')
     <div class="grid grid-cols-12 gap-4">
         <div class="p-6 rounded-lg bg-white col-span-12">
-            <div class="flex gap-5 items-center">
+            <div class="flex gap-x-5 gap-y-2 items-center flex-wrap">
                 <h2 class="text-3xl font-semibold">Pesanan #647</h2>
                 <span class="bg-yellow-100 text-yellow-800 text-xs font-bold me-2 px-2.5 py-1 rounded">Belum
                     Dikonfirmasi</span>
             </div>
-            <div class="mt-3.5 flex items-center gap-4">
+            <div class="mt-3.5 flex items-center gap-4 flex-wrap">
                 <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
@@ -48,39 +48,42 @@
                 </div>
             </div>
         </div>
-        <div class="p-6 rounded-lg bg-white col-span-7">
+        <div class="p-6 rounded-lg bg-white col-span-12 md:col-span-7">
             <h2 class="text-3xl font-semibold">Daftar Barang</h2>
             @for ($i = 0; $i < 3; $i++)
-                <div class="mt-5 px-6 py-4 rounded-lg border flex gap-3 justify-between">
-                    <div class="">
-                        <h3 class="text-2xl font-semibold">Botol Plastik</h3>
-                        <p class="font-medium mt-2">10 kg</p>
-                        <div class="flex gap-2.5 mt-2.5">
-                            <button type="button" data-modal-target="extralarge-modal" data-modal-toggle="extralarge-modal"
-                                class="text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg text-sm px-4 py-2 text-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 inline-block me-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                                </svg>
-                                <span>Gambar</span>
-                            </button>
-                            <button type="button" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-                                class="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-teal-100 font-medium rounded-lg text-sm px-4 py-2 text-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 inline-block me-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
-                                </svg>
-                                <span>Set Harga</span>
-                            </button>
+                <div class="mt-5 px-6 py-4 rounded-lg border">
+                    <div class="flex gap-3 justify-between">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Botol Plastik</h3>
+                            <p class="font-medium mt-2">10 kg</p>
                         </div>
+                        <h3 class="text-xl font-semibold text-end">17.000 - 20.000</h3>
                     </div>
-                    <h3 class="text-xl font-semibold text-end">17.000 - 20.000</h3>
+
+                    <div class="flex gap-2.5 mt-2.5">
+                        <button type="button" data-modal-target="extralarge-modal" data-modal-toggle="extralarge-modal"
+                            class="text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg sm:text-sm sm:px-4 sm:py-2 text-xs px-3 py-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="sm:size-5 inline-block sm:me-2 size-4 me-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                            <span>Gambar</span>
+                        </button>
+                        <button type="button" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                            class="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-teal-100 font-medium rounded-lg sm:text-sm sm:px-4 sm:py-2 text-xs px-3 py-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="sm:size-5 inline-block sm:me-2 size-4 me-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                            </svg>
+                            <span>Set Harga</span>
+                        </button>
+                    </div>
                 </div>
             @endfor
         </div>
-        <div class="p-6 rounded-lg bg-white col-span-5">
+        <div class="p-6 rounded-lg bg-white col-span-12 md:col-span-5">
             <h2 class="text-3xl font-semibold">Daftar Barang</h2>
             <div class="flex justify-between gap-2 mt-5">
                 <p>Jenis Barang</p>
