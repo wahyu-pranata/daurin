@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $guarded = ["id"];
+    protected $guarded = [];
+    protected $keyType = 'string';
 
     public function user()
     {
