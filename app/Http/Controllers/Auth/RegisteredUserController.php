@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Address;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
@@ -19,7 +21,13 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $provinces = Http::get('https://api.binderbyte.com/wilayah/provinsi', [
+            'api_key' => env("API_KEY"),
+        ]);
+        $provinces = $provinces->json("value");
+        return view('auth.register', [
+            'provinces' => $provinces,
+        ]);
     }
 
     /**
@@ -39,6 +47,17 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 'customer',
+        ]);
+
+        Address::create([
+            'address' => $request->address,
+            'province' => $request->province,
+            'city' => $request->city,
+            'district' => $request->district,
+            'village' => $request->village,
+            'is_home' => true,
+            'user_id' => $user->id
         ]);
 
         event(new Registered($user));

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum("role", ["agent", "customer"]);
-            $table->string("image");
+            $table->string("image")->nullable();
             $table->foreignId("agency_id")->nullable();
             $table->rememberToken();
             $table->timestamps();

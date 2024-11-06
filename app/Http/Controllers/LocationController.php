@@ -12,7 +12,7 @@ class LocationController extends Controller
         $response = Http::get('https://api.binderbyte.com/wilayah/provinsi', [
             'api_key' => env("API_KEY"),
         ]);
-        return $response->json();
+        return $response->json("value");
     }
     public function getCities(string $provinceId)
     {
@@ -20,7 +20,7 @@ class LocationController extends Controller
             'api_key' => env("API_KEY"),
             'id_provinsi' => $provinceId,
         ]);
-        dd($response->json());
+        return $response->json("value");
     }
 
     public function getDistricts(string $cityId)
@@ -29,7 +29,7 @@ class LocationController extends Controller
             'api_key' => env("API_KEY"),
             'id_kabupaten' => $cityId,
         ]);
-        dd($response->json());
+        return $response->json("value");
     }
     public function getVillages(string $districtId)
     {
@@ -37,6 +37,6 @@ class LocationController extends Controller
             'api_key' => env("API_KEY"),
             'id_kecamatan' => $districtId,
         ]);
-        dd($response->json());
+        return $response->json("value");
     }
 }
