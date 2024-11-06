@@ -6,8 +6,10 @@ use App\Models\Item;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
 use App\Models\Address;
+use App\Models\Order;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -43,6 +45,48 @@ class DatabaseSeeder extends Seeder
             "postal_code" => "80237"
         ]);
 
+        DB::table("items")->insert([
+            "name" => "Kardus",
+            "base_price" => 1000,
+            "top_price" => 2000,
+            "unit" => "kg",
+            "agency_id" => 1
+        ]);
+        DB::table("items")->insert([
+            "name" => "Botol",
+            "base_price" => 1000,
+            "top_price" => 2000,
+            "unit" => "kg",
+            "agency_id" => 1
+        ]);
+        DB::table("items")->insert([
+            "name" => "Kaleng Minuman",
+            "base_price" => 2000,
+            "top_price" => 5000,
+            "unit" => "kg",
+            "agency_id" => 1
+        ]);
+        DB::table("items")->insert([
+            "name" => "Kardus",
+            "base_price" => 1000,
+            "top_price" => 2000,
+            "unit" => "kg",
+            "agency_id" => 2
+        ]);
+        DB::table("items")->insert([
+            "name" => "Kertas/Buku",
+            "base_price" => 500,
+            "top_price" => 2000,
+            "unit" => "kg",
+            "agency_id" => 2
+        ]);
+        DB::table("items")->insert([
+            "name" => "Kaleng Besar",
+            "base_price" => 3000,
+            "top_price" => 5000,
+            "unit" => "kg",
+            "agency_id" => 2
+        ]);
         User::factory()->create([
             'name' => 'Made Aditya',
             'email' => 'imadeaditya4@gmail.com',
@@ -68,7 +112,7 @@ class DatabaseSeeder extends Seeder
             "name" => "Rumah Saya",
             "user_id" => 1
         ]);
-        
+
         Address::create([
             "address" => "Jalan Mawar, Gg. Guanjiwa",
             "province" => "Bali",
@@ -101,6 +145,23 @@ class DatabaseSeeder extends Seeder
             'top_price' => 1900,
             'unit' => 'kg',
             'agency_id' => 2
+        ]);
+
+        $order1 = Order::create([
+            'id' => Str::uuid(),
+            'delivery_option' => 'dijemput',
+            'user_id' => 1,
+            'agency_id' => 1,
+            'address_id' => 1,
+            'ship_date' => now()
+        ]);
+        $order2 = Order::create([
+            'id' => Str::uuid(),
+            'delivery_option' => 'dijemput',
+            'user_id' => 1,
+            'agency_id' => 2,
+            'address_id' => 1,
+            'ship_date' => now()
         ]);
     }
 }
