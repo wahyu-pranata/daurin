@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->uuid("id")->primary();
-            $table->string("delivery_option");
-            $table->enum("status", ["pending", "progress", "success", "canceled"])->default("pending");
-            $table->integer("shipping_cost");
-            $table->string("transaction_proof");
+            $table->enum("delivery_option", ['dijemput', 'dibawa']);
+            $table->enum("status", ["Belum Dikonfirmasi", "Dikonfirmasi", "Selesai", "Dibatalkan"])->default("Belum Dikonfirmasi");
+            $table->integer("shipping_cost")->nullable();
+            $table->string("transaction_proof")->nullable();
             $table->foreignId("user_id");
             $table->foreignId("agency_id");
             $table->foreignId("address_id");
+            $table->date("ship_date");
             $table->timestamps();
         });
     }

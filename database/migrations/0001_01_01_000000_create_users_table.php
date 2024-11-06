@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->enum("role", ["agent", "customer"]);
             $table->string("image")->nullable();
-            $table->foreignId("agency_id");
+            $table->foreignId("agency_id")->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

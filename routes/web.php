@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\APIController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
-use App\Http\Controllers\LocationController;
 
 Route::get('/', function () {
     return view('user.landing-page');
@@ -24,11 +25,12 @@ Route::middleware('auth')->group(function () {
 });
 
 // User
-Route::middleware(['guest'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/orders/new', [OrderController::class, 'create']);
     Route::get('/orders', function () {
         return view("user.riwayat");
     });
+    Route::post('/orders/new', [OrderController::class, 'store']);
 });
 
 // Admin
@@ -47,6 +49,11 @@ Route::name('location.')->prefix('location')->controller(LocationController::cla
     Route::get('/cities/{provinceId}', 'getCities');
     Route::get('/districts/{cityId}', 'getDistricts');
     Route::get('/villages/{districtId}', 'getVillages');
+});
+
+Route::middleware(['auth'])->prefix('api')->controller(APIController::class)->group(function () {
+    Route::get('/pengepul-rekomen', 'rekomendasiPengepul');
+    Route::get('/items-by-agency', 'itemsByAgency');
 });
 
 require __DIR__ . '/auth.php';
