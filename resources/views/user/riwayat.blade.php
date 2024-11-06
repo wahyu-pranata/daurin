@@ -71,7 +71,7 @@
         <!-- card 1 -->
         <div class="flex flex-col space-y-4 px-6 py-5 border-2 border-opacity-10 border-dark2 rounded-lg ">
             <div class="flex flex-row space-x-4">
-                <h2 class="text-2xl">Mitra Pengepul</h2>
+                <h2 class="font-semibold text-2xl">Pengepul Makmur Sejahtera</h2>
                 <div class="text-[#854D0E] bg-[#FEF9C3] px-2 py-1 rounded-md font-bold text-sm">Menunggu Konfirmasi</div>
             </div>
             <div class="flex flex-row  space-x-5"> 
@@ -120,7 +120,7 @@
         <!-- card 2 -->
         <div class="flex flex-col space-y-4 px-6 py-5 border-2 border-opacity-10 border-dark2 rounded-lg ">
             <div class="flex flex-row space-x-4">
-                <h2 class="text-2xl">Mitra Pengepul</h2>
+                <h2 class="font-semibold text-2xl">Mitra Pengepul</h2>
                 <div class="text-[#1E40AF] bg-[#DBEAFE] px-2 py-1 rounded-md font-bold text-sm">Dikonfirmasi</div>
             </div>
             <div class="flex flex-row  space-x-5"> 
@@ -168,7 +168,7 @@
         <!-- card 3 -->
         <div class="flex flex-col space-y-4 px-6 py-5 border-2 border-opacity-10 border-dark2 rounded-lg ">
             <div class="flex flex-row space-x-4">
-                <h2 class="text-2xl">Mitra Pengepul</h2>
+                <h2 class="font-semibold text-2xl">Mitra Pengepul</h2>
                 <div class="text-[#166534] bg-[#DCFCE7] px-2 py-1 rounded-md font-bold text-sm">Pesanan Selesai</div>
             </div>
             <div class="flex flex-row space-x-5"> 

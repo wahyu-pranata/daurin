@@ -26,6 +26,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['guest'])->group(function () {
     Route::get('/orders/new', [OrderController::class, 'create']);
     Route::get('/orders', function () { return view("user.riwayat"); });
+    Route::get('/orders/detail', function () { return view("user.order.detail"); });
+    Route::get('/home', function () { return view("user.home"); });
+    Route::get('/agent', function () { return view("user.list-pengepul"); });
 });
 
 // Admin
