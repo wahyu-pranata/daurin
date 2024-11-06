@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\APIController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
@@ -32,7 +34,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 // Admin
-Route::middleware(['guest'])->prefix('admin')->group(function () {
+Route::middleware(['auth', 'can:is-agent'])->prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, 'dashboard']);
     Route::get('/pesanan', [AdminOrderController::class, 'index']);
     Route::get('/pesanan/detail', [AdminOrderController::class, 'detail']);
@@ -42,4 +44,16 @@ Route::middleware(['guest'])->prefix('admin')->group(function () {
     Route::get('/pengaturan', [AdminController::class, 'settings']);
 });
 
-require __DIR__.'/auth.php';
+Route::name('location.')->prefix('location')->controller(LocationController::class)->group(function () {
+    Route::get('/provinces', 'getProvinces');
+    Route::get('/cities/{provinceId}', 'getCities');
+    Route::get('/districts/{cityId}', 'getDistricts');
+    Route::get('/villages/{districtId}', 'getVillages');
+});
+
+Route::middleware(['auth'])->prefix('api')->controller(APIController::class)->group(function () {
+    Route::get('/pengepul-rekomen', 'rekomendasiPengepul');
+    Route::get('/items-by-agency', 'itemsByAgency');
+});
+
+require __DIR__ . '/auth.php';

@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string("ktp_number");
             $table->string("ktp_image");
             $table->string("surat_kepemilikan_image");
+            $table->string('address');
+            $table->string('province');
+            $table->string('city');
+            $table->string('district');
+            $table->string('village');
+            $table->string('postal_code');
             $table->timestamps();
         });
     }

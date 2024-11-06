@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId("item_id");
             $table->foreignUuid("order_id");
+            $table->integer("base_price")->nullable();
+            $table->integer("top_price")->nullable();
             $table->integer("price")->nullable();
             $table->string("image");
             $table->integer("amount");

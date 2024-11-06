@@ -13,4 +13,9 @@ class Item extends Model
     {
         return $this->belongsToMany(Order::class, "item_order");
     }
+
+    public function agency()
+    {
+        return $this->belongsTo(Agency::class);
+    }
 }
