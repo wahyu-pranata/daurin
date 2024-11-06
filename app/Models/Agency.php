@@ -12,4 +12,9 @@ class Agency extends Model
     {
         return $this->hasMany(Order::class);
     }
+    
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
 }
